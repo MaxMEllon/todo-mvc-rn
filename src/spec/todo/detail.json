@@ -1,0 +1,19 @@
+{
+  "request": {
+    "path": "/todo/:id",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "id": "{:id}",
+      "title": "{:title}",
+      "status": "{:status}"
+    },
+    "values": {
+      "id": "xxxx-yyyy-zzzz",
+      "title": "buy 2 milks",
+      "status": "todo"
+    }
+  }
+}

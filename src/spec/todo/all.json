@@ -1,0 +1,38 @@
+{
+  "request": {
+    "path": "/todo",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "todos": [
+        {
+          "id": "{:todos.0.id}",
+          "title": "{:todos.0.name}",
+          "done": "{:todos.0.done}"
+        },
+        "{:todos.1-last}"
+      ]
+    },
+    "values": {
+      "todos": [
+        {
+          "id": "xxxx-yyyy-zzzz",
+          "title": "buy milk",
+          "status": "todo"
+        },
+        {
+          "id": "aaaa-bbbb-cccc",
+          "title": "buy beer",
+          "status": "doing"
+        },
+        {
+          "id": "iiii-jjjj-kkkk",
+          "title": "buy peanuts",
+          "status": "done"
+        }
+      ]
+    }
+  }
+}

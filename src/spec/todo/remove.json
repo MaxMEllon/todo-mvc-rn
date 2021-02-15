@@ -1,0 +1,12 @@
+{
+  "request": {
+    "path": "/todo/:id",
+    "method": "DELETE",
+    "values": {
+      "id": "xxxx-yyyy-zzzz"
+    }
+  },
+  "response": {
+    "status": 204
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "path": "/todo",
+    "method": "PATCH",
+    "body": {
+      "id": "{:id}",
+      "title": "{:name}",
+      "status": "{:done}"
+    },
+    "values": {
+      "id": "xxxx-yyyy-zzzz",
+      "title": "buy 2 milks",
+      "status": "doing"
+    }
+  },
+  "response": {
+    "status": 201,
+    "body": {
+      "id": "{:id}",
+      "name": "{:title}",
+      "status": "{:status}"
+    },
+    "values": {
+      "id": "xxxx-yyyy-zzzz",
+      "title": "buy 2 milks",
+      "status": "doing"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "request": {
+    "path": "/todo",
+    "method": "POST",
+    "body": {
+      "title": "{:title}",
+      "status": "{:status}"
+    },
+    "values": {
+      "title": "buy a milk",
+      "status": "todo"
+    }
+  },
+  "response": {
+    "status": 201,
+    "body": {
+      "id": "xxxx-yyyy-zzzz",
+      "title": "{:title}",
+      "status": "{:todo}"
+    },
+    "values": {
+      "title": "buy a milk",
+      "status": "todo"
+    }
+  }
+}
