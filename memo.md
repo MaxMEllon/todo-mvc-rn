@@ -1,49 +1,19 @@
 # 今やってること
 
-- bottom tab を作る
-
-- 1. そのために react-navigation を install
+- BottomTab に icon を乗せる
 
 ```
-npm install @react-navigation/native
-
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install @expo/vector-icons
 ```
 
-追加で bottom-tabs を install
+App.tsx 編集
 
-```
-npm install @react-navigation/bottom-tabs
-```
+- 自分の好きな icon を探す
+- Tab.Screen 各種に icon を指定する
 
-(nodenv を使っている人は `nodenv rehash` が必要かも)
-
-- 2. install したら tab をつくる
-
-画面を実装するファイルを作る
-
-```
-src/app
-    └── components
-        ├── AddTodo
-        │   └── index.tsx
-        └── TodoList
-            └── index.tsx
-```
-
-2file編集する
-(App.tsx から Screen を分割する)
-
-- `src/app/components/AddTodo/index.tsx`
-
-- `src/app/components/TodoList/index.tsx`
-
-App.tsx で import
-(Screen を import して使う)
-
-コミットしておく
+# ここまで終われば お昼休憩
 
 # 次やること
 
-- BottomTab に icon を乗せる
+- Task 追加画面の実装
 
