@@ -13,5 +13,5 @@ $ npm run start:server
 # API-doc の 起動
 
 ```
-$ npm run start:ui
+$ npm run start:spec
 ```
