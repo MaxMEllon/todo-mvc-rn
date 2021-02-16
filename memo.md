@@ -1,19 +1,15 @@
 # 今やってること
 
-- BottomTab に icon を乗せる
-
 ```
-npm install @expo/vector-icons
+npm install @react-navigation/stack
 ```
 
-App.tsx 編集
+- TabNavigatior の下に Stack を入れて画面の戻る進むをできるように，画面を追加できるように
 
-- 自分の好きな icon を探す
-- Tab.Screen 各種に icon を指定する
-
-# ここまで終われば お昼休憩
+- 各種画面を遷移可能にする (ヘッダーをつける)
 
 # 次やること
 
 - Task 追加画面の実装
 
+# 次の次
