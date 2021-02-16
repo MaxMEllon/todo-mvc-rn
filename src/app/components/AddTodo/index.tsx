@@ -1,29 +1,56 @@
 import * as React from "react";
 import { useState } from "react"
+import axios from "axios"
 import styled from "styled-components";
 import { Text, View, TextInput, Dimensions, TouchableHighlight } from "react-native";
+import Snackbar from "../Snackbar"
 
 const AddTodo = () => {
   const [todoTitle, changeTodoTitle] = useState('')
+  const [created, changeCreated] = useState(false)
+  const onSubmit = async () => {
+    if (todoTitle.trim() === "") {
+      return 
+    }
+    const payload = {
+      title: todoTitle,
+      status: "todo",
+    }
+    try {
+      await axios
+        .post('http://localhost:3000/todo', payload)
+      changeTodoTitle('')
+      changeCreated(true)
+    } catch (err) {
+      console.error(err)
+    }
+  }
   return (
     <AddTodoPresentation
+      created={created}
       todoTitle={todoTitle}
       onChangeTodoTitle={changeTodoTitle}
+      onSubmit={onSubmit}
     />
   )
 }
 
 type Props = {
   todoTitle: string
+  created: boolean
   onChangeTodoTitle: (txt: string) => unknown
+  onSubmit: () => unknown
 }
 
 const AddTodoPresentation: React.FC<Props> = ({
   todoTitle,
-  onChangeTodoTitle
+  created,
+  onChangeTodoTitle,
+  onSubmit,
 }) => {
   return (
     <Section>
+      {created && <Snackbar message="タスクを作成しました" />}
       <Form>
         <Header>タスク名を入力</Header>
         <Input
@@ -31,7 +58,7 @@ const AddTodoPresentation: React.FC<Props> = ({
           onChangeText={onChangeTodoTitle}
         />
         <SubmitSeciton>
-          <Submit>
+          <Submit onPress={onSubmit}>
             <Text>追加する</Text>
           </Submit>
         </SubmitSeciton>
